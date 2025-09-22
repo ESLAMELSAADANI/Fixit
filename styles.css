@@ -291,6 +291,14 @@ body {
     color: #333;
 }
 
+.step-icon {
+    font-size: 2.5rem;
+    color: #FFC107;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+
 /* Dashboard */
 .dashboard {
     padding: 80px 0;
@@ -306,6 +314,11 @@ body {
 
 .dashboard-header h2 {
     color: #333;
+}
+
+.dashboard-header h2 i {
+    margin-left: 0.5rem;
+    color: #FFC107;
 }
 
 .dashboard-stats {

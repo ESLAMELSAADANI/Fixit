@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="./wrench.png">
+
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -17,10 +21,10 @@
                 <span>Fixit</span>
             </div>
             <div class="nav-menu">
-                <a href="#home" class="nav-link">الرئيسية</a>
-                <a href="#services" class="nav-link">الخدمات</a>
-                <a href="#how-it-works" class="nav-link">كيف يعمل</a>
-                <a href="#contact" class="nav-link">تواصل</a>
+                <a href="#home" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="#services" class="nav-link"><i class="fas fa-cogs"></i> الخدمات</a>
+                <a href="#how-it-works" class="nav-link"><i class="fas fa-question-circle"></i> كيف يعمل</a>
+                <a href="#contact" class="nav-link"><i class="fas fa-phone"></i> تواصل</a>
             </div>
             <div class="nav-actions">
                 <button class="btn-login" onclick="showAuthModal()">تسجيل الدخول</button>
@@ -100,21 +104,25 @@
             <div class="steps-grid">
                 <div class="step">
                     <div class="step-number">1</div>
+                    <i class="fas fa-plus-circle step-icon"></i>
                     <h3>اطلب الخدمة</h3>
                     <p>اختر الخدمة المطلوبة وحدد التفاصيل</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
+                    <i class="fas fa-comments step-icon"></i>
                     <h3>احصل على عروض</h3>
                     <p>استقبل عروض من الفنيين المتاحين</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
+                    <i class="fas fa-user-check step-icon"></i>
                     <h3>اختر الفني</h3>
                     <p>اختر أفضل فني بناءً على التقييم والسعر</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
+                    <i class="fas fa-star step-icon"></i>
                     <h3>استمتع بالخدمة</h3>
                     <p>احصل على الخدمة في الموعد المحدد</p>
                 </div>
@@ -177,7 +185,7 @@
     <section id="customer-dashboard" class="dashboard" style="display: none;">
         <div class="container">
             <div class="dashboard-header">
-                <h2>لوحة تحكم العميل</h2>
+                <h2><i class="fas fa-user"></i> لوحة تحكم العميل</h2>
                 <button class="btn-secondary" onclick="showNewRequest()">طلب جديد</button>
             </div>
             <div class="dashboard-stats">
@@ -212,7 +220,7 @@
     <section id="provider-dashboard" class="dashboard" style="display: none;">
         <div class="container">
             <div class="dashboard-header">
-                <h2>لوحة تحكم الفني</h2>
+                <h2><i class="fas fa-tools"></i> لوحة تحكم الفني</h2>
                 <div class="provider-status">
                     <span class="status-indicator online"></span>
                     <span>متاح للعمل</span>
@@ -364,4 +372,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
