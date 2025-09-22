@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixit - منصة الخدمات المنزلية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-wrench"></i>
+                <span>Fixit</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">الرئيسية</a>
+                <a href="#services" class="nav-link">الخدمات</a>
+                <a href="#how-it-works" class="nav-link">كيف يعمل</a>
+                <a href="#contact" class="nav-link">تواصل</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-login" onclick="showAuthModal()">تسجيل الدخول</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>احصل على خدمات منزلية موثوقة في دقائق</h1>
+                <p>اربط مع أفضل الفنيين والمتخصصين في منطقتك</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="showCustomerRequest()">اطلب خدمة</button>
+                    <button class="btn-secondary" onclick="showProviderRegister()">انضم كفني</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>خدمات متنوعة</h3>
+                    <p>سباكة، كهرباء، نجارة، تنظيف وأكثر</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card" onclick="selectService('plumbing')">
+                    <i class="fas fa-wrench"></i>
+                    <h3>السباكة</h3>
+                    <p>إصلاح وتركيب جميع أعمال السباكة</p>
+                </div>
+                <div class="service-card" onclick="selectService('electrical')">
+                    <i class="fas fa-bolt"></i>
+                    <h3>الكهرباء</h3>
+                    <p>إصلاح وتركيب الأعمال الكهربائية</p>
+                </div>
+                <div class="service-card" onclick="selectService('carpentry')">
+                    <i class="fas fa-hammer"></i>
+                    <h3>النجارة</h3>
+                    <p>تصنيع وإصلاح الأثاث والأبواب</p>
+                </div>
+                <div class="service-card" onclick="selectService('cleaning')">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>التنظيف</h3>
+                    <p>تنظيف المنازل والمكاتب</p>
+                </div>
+                <div class="service-card" onclick="selectService('painting')">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>الدهان</h3>
+                    <p>دهان المنازل والشقق</p>
+                </div>
+                <div class="service-card" onclick="selectService('ac')">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>المكيفات</h3>
+                    <p>تركيب وصيانة المكيفات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">كيف يعمل النظام</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>اطلب الخدمة</h3>
+                    <p>اختر الخدمة المطلوبة وحدد التفاصيل</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>احصل على عروض</h3>
+                    <p>استقبل عروض من الفنيين المتاحين</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>اختر الفني</h3>
+                    <p>اختر أفضل فني بناءً على التقييم والسعر</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>استمتع بالخدمة</h3>
+                    <p>احصل على الخدمة في الموعد المحدد</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>الهاتف</h3>
+                        <p>010-12345678</p>
+                        <p>011-87654321</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>البريد الإلكتروني</h3>
+                        <p>info@fixit.com</p>
+                        <p>support@fixit.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>العنوان</h3>
+                        <p>القاهرة، مصر</p>
+                        <p>متاح 24/7</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="contact-form" class="service-form">
+                        <div class="form-group">
+                            <label>الاسم</label>
+                            <input type="text" id="contact-name" placeholder="أدخل اسمك" required>
+                        </div>
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" id="contact-email" placeholder="أدخل بريدك الإلكتروني" required>
+                        </div>
+                        <div class="form-group">
+                            <label>الموضوع</label>
+                            <input type="text" id="contact-subject" placeholder="موضوع الرسالة" required>
+                        </div>
+                        <div class="form-group">
+                            <label>الرسالة</label>
+                            <textarea id="contact-message" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Dashboard (Hidden by default) -->
+    <section id="customer-dashboard" class="dashboard" style="display: none;">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>لوحة تحكم العميل</h2>
+                <button class="btn-secondary" onclick="showNewRequest()">طلب جديد</button>
+            </div>
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>الطلبات النشطة</h3>
+                    <span class="stat-number" id="active-requests">3</span>
+                </div>
+                <div class="stat-card">
+                    <h3>الطلبات المكتملة</h3>
+                    <span class="stat-number" id="completed-requests">12</span>
+                </div>
+                <div class="stat-card">
+                    <h3>التقييم العام</h3>
+                    <span class="stat-number">4.8</span>
+                </div>
+            </div>
+            <div class="requests-list">
+                <h3>طلباتي الأخيرة</h3>
+                <div class="request-item">
+                    <div class="request-info">
+                        <h4>إصلاح تسرب مياه</h4>
+                        <p>أحمد السباك - ⭐⭐⭐⭐⭐</p>
+                        <small>تم الإنجاز بتاريخ 15/12/2024</small>
+                    </div>
+                    <div class="request-status completed">مكتمل</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provider Dashboard (Hidden by default) -->
+    <section id="provider-dashboard" class="dashboard" style="display: none;">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>لوحة تحكم الفني</h2>
+                <div class="provider-status">
+                    <span class="status-indicator online"></span>
+                    <span>متاح للعمل</span>
+                </div>
+            </div>
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>الطلبات اليوم</h3>
+                    <span class="stat-number" id="today-requests">5</span>
+                </div>
+                <div class="stat-card">
+                    <h3>الأرباح الشهرية</h3>
+                    <span class="stat-number" id="monthly-earnings">2,500 ج.م</span>
+                </div>
+                <div class="stat-card">
+                    <h3>التقييم</h3>
+                    <span class="stat-number">4.9 ⭐</span>
+                </div>
+            </div>
+            <div class="provider-actions">
+                <button class="btn-primary" onclick="toggleAvailability()">تغيير حالة التوفر</button>
+                <button class="btn-secondary" onclick="viewEarnings()">عرض الأرباح</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Request Modal -->
+    <div id="service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>اطلب خدمة جديدة</h2>
+            <form id="service-form" class="service-form">
+                <div class="form-group">
+                    <label>نوع الخدمة</label>
+                    <select id="service-type" required>
+                        <option value="">اختر الخدمة</option>
+                        <option value="plumbing">السباكة</option>
+                        <option value="electrical">الكهرباء</option>
+                        <option value="carpentry">النجارة</option>
+                        <option value="cleaning">التنظيف</option>
+                        <option value="painting">الدهان</option>
+                        <option value="ac">المكيفات</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>وصف المشكلة</label>
+                    <textarea id="problem-description" placeholder="اكتب تفاصيل المشكلة..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>العنوان</label>
+                    <input type="text" id="address" placeholder="أدخل عنوانك بالتفصيل" required>
+                </div>
+                <div class="form-group">
+                    <label>الموعد المفضل</label>
+                    <input type="datetime-local" id="preferred-time" required>
+                </div>
+                <div class="form-group">
+                    <label>ميزانيتك المتوقعة</label>
+                    <input type="number" id="budget" placeholder="بالجنيه المصري" required>
+                </div>
+                <button type="submit" class="btn-primary">إرسال الطلب</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="auth-tab active" onclick="showLogin()">تسجيل الدخول</button>
+                <button class="auth-tab" onclick="showRegister()">إنشاء حساب</button>
+            </div>
+            <form id="auth-form" class="auth-form">
+                <div id="login-form">
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>كلمة المرور</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">دخول</button>
+                </div>
+                <div id="register-form" style="display: none;">
+                    <div class="form-group">
+                        <label>الاسم</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>كلمة المرور</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>نوع الحساب</label>
+                        <select id="account-type">
+                            <option value="customer">عميل</option>
+                            <option value="provider">فني</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">إنشاء حساب</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fixit</h3>
+                    <p>أفضل منصة للخدمات المنزلية في مصر</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">السباكة</a></li>
+                        <li><a href="#">الكهرباء</a></li>
+                        <li><a href="#">النجارة</a></li>
+                        <li><a href="#">التنظيف</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>الدعم</h4>
+                    <ul>
+                        <li><a href="#">المساعدة</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fixit. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
